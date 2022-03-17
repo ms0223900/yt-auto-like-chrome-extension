@@ -1,0 +1,26 @@
+{
+  "name": "Yt Auto Like Extension",
+  "description": "Youtube自動按讚插件",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "icons": {
+    "48": "icon_48.png"
+  },
+  "action": {
+    "default_icon": "icon_48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "./src/content-script.js"
+      ]
+    }
+  ]
+}
